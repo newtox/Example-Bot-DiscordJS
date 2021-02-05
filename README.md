@@ -1,2 +1,2 @@
-# Example-Bot-DiscordJS 
+# Example-Bot-DiscordJS
  
