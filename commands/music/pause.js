@@ -10,6 +10,7 @@ module.exports = {
     aliases: [],
     async execute(message, args, client) {
         const serverQueue = client.queue.get(message.guild.id);
+
         if (serverQueue && serverQueue.playing) {
             serverQueue.playing = false;
             if (message.guild.me.permissions.has('ADD_REACTIONS')) {

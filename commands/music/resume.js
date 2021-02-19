@@ -10,6 +10,7 @@ module.exports = {
     aliases: ['unpause'],
     async execute(message, args, client) {
         const serverQueue = client.queue.get(message.guild.id);
+
         if (serverQueue && !serverQueue.playing) {
             serverQueue.playing = true;
             if (message.guild.me.permissions.has('ADD_REACTIONS')) {

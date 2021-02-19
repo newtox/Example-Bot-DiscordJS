@@ -19,7 +19,7 @@ module.exports = {
         if (!victim) return message.channel.send('You need to mention someone you want to ban.');
         if (!victim.bannable) return message.channel.send('I do not have the permission to ban this member, make sure I have a higher position than them!');
         if (!reason) reason = 'No reason entered.';
-        
+
         try {
             victim.ban({
                 reason: res

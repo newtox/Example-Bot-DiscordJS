@@ -29,13 +29,13 @@ module.exports = {
 
         let ServerIcon = '';
 
-		if (message.guild.iconURL()) {
-			ServerIcon = message.guild.iconURL({
-				dynamic: true,
-				size: 1024,
-				format: 'png'
-			});
-		}
+        if (message.guild.iconURL()) {
+            ServerIcon = message.guild.iconURL({
+                dynamic: true,
+                size: 1024,
+                format: 'png'
+            });
+        }
 
         const video = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.?be)\/.+$/gi;
         const playlist = /^https?:\/\/(www.youtube.com|youtube.com)\/playlist(.*)$/g;

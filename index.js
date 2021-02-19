@@ -13,11 +13,11 @@ const config = require('./config/config');
 
 console.log('Commands loading');
 for (const folder of readdirSync(join(__dirname, 'commands'))) {
-	for (const file of readdirSync(join(__dirname, `commands/${folder}`))) {
-		console.log('- Loading command ' + file.split(',')[0]);
-		const command = require(join(__dirname, `commands/${folder}/${file}`));
-		client.commands.set(file.split('.')[0], command);
-	}
+    for (const file of readdirSync(join(__dirname, `commands/${folder}`))) {
+        console.log('- Loading command ' + file.split(',')[0]);
+        const command = require(join(__dirname, `commands/${folder}/${file}`));
+        client.commands.set(file.split('.')[0], command);
+    }
 }
 
 client.once('ready', async () => {

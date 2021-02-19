@@ -37,6 +37,7 @@ module.exports = {
                 .setTimestamp()
                 .setThumbnail(client.user.avatarURL({
                     dynamic: true,
+                    size: 1024,
                     format: 'png'
                 }))
                 .addFields({

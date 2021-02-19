@@ -9,7 +9,9 @@ module.exports = {
     group: 'Music',
     aliases: ['vol'],
     async execute(message, args, client) {
-        const { channel } = message.member.voice;
+        const {
+            channel
+        } = message.member.voice;
         if (!channel) return message.channel.send('I\'m sorry but you need to be in a voice channel to play music!');
 
         const serverQueue = client.queue.get(message.guild.id);

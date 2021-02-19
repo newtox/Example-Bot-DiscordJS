@@ -14,17 +14,18 @@ module.exports = {
     aliases: ['q'],
     async execute(message, args, client) {
         const serverQueue = client.queue.get(message.guild.id);
+
         if (!serverQueue) return message.channel.send('There is nothing playing.');
 
         let ServerIcon = '';
 
-		if (message.guild.iconURL()) {
-			ServerIcon = message.guild.iconURL({
-				dynamic: true,
-				size: 1024,
-				format: 'png'
-			});
-		}
+        if (message.guild.iconURL()) {
+            ServerIcon = message.guild.iconURL({
+                dynamic: true,
+                size: 1024,
+                format: 'png'
+            });
+        }
 
         const embed = new MessageEmbed()
             .setColor(client.config.MAINCOLOR)
