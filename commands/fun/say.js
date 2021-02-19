@@ -6,6 +6,7 @@ module.exports = {
     guildOnly: true,
     developerOnly: false,
     cooldown: 5,
+    group: 'Fun',
     aliases: ['speak', 'talk'],
     async execute(message, args, client) {
         if (message.guild.me.permissions.has('MANAGE_MESSAGES')) {

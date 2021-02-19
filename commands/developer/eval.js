@@ -7,6 +7,7 @@ module.exports = {
     guildOnly: false,
     developerOnly: true,
     cooldown: 5,
+    group: 'Developer',
     aliases: ['ev'],
     async execute(message, args, client) {
         function clean(text) {

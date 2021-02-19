@@ -15,6 +15,7 @@ Fill out the values in the config/config.js file.
 const PREFIX = '';
 const TOKEN = '';
 const OWNER = '';
+const MAINCOLOR = '';
 ```
 
 Start the bot using **nodemon** in console.

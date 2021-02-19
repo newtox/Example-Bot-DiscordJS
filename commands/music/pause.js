@@ -6,9 +6,10 @@ module.exports = {
     guildOnly: true,
     developerOnly: false,
     cooldown: 5,
+    group: 'Music',
     aliases: [],
     async execute(message, args, client) {
-        const serverQueue = message.client.queue.get(message.guild.id);
+        const serverQueue = client.queue.get(message.guild.id);
         if (serverQueue && serverQueue.playing) {
             serverQueue.playing = false;
             if (message.guild.me.permissions.has('ADD_REACTIONS')) {
@@ -19,7 +20,7 @@ module.exports = {
                 return message.channel.send('⏸ Paused the music for you!');
             }
         } else {
-            return message.channel.send('There is nothing playing');
+            return message.channel.send('There is nothing playing.');
         }
     }
 }

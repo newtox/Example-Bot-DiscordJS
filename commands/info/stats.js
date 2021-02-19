@@ -7,11 +7,12 @@ module.exports = {
     guildOnly: false,
     developerOnly: false,
     cooldown: 5,
+    group: 'Info',
     aliases: ['botinfo', 'info', 'invite'],
     async execute(message, args, client) {
         const owner = client.users.cache.get(client.config.OWNER);
         const embed = new MessageEmbed()
-            .setColor(0xCFE7FD)
+            .setColor(client.config.MAINCOLOR)
             .setTimestamp()
             .setThumbnail(client.user.avatarURL({
                 format: 'png',
