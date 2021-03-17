@@ -23,7 +23,7 @@ module.exports = {
             let code = args.join(' ');
             let evaled = eval(code);
             if (typeof evaled !== 'string') evaled = require('util').inspect(evaled);
-            evaled = (evaled).replace(client.config.TOKEN, 'token when?!?!?');
+            evaled = (evaled).replace(client.config.TOKEN || client.token, 'token when?!?!?');
 
             if (evaled.length > 2000) {
                 const options = {
