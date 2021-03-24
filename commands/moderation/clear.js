@@ -20,7 +20,7 @@ module.exports = {
 
         await message.delete();
 
-        const deletedMessages = await message.channel.bulkDelete(deleteCount).catch(async error => {
+        const deletedMessages = await message.channel.bulkDelete(clearAmount).catch(async error => {
             if (error.message === 'You can only bulk delete messages that are under 14 days old.') {
                 return message.channel.send('You can only bulk delete messages that are under 14 days old.');
             }
