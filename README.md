@@ -3,14 +3,7 @@
 
 ## Installation
 
-```
-npm install
-```
-
-## Usage
-
-Fill out the values in the config/config.js file.
-
+1. First you should replace the placeholders in the `config.js` file with your items.  e.g token, ownerID etc.
 ```javascript
 const PREFIX = '';
 const TOKEN = '';
@@ -18,7 +11,9 @@ const OWNER = '';
 const MAINCOLOR = '';
 ```
 
-Start the bot using **nodemon** in console.
+2. Execute the 'init.bat' to install every module needed.
+
+3. After you've completed all steps before, simply start the 'startbot.bat' and your bot should be online without any problems. 
 
 ## Author
 
