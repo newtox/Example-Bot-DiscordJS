@@ -7,7 +7,6 @@ const {
     readdirSync
 } = require('fs');
 const config = require('../config/config');
-const musicUtil = require('../util/Music');
 module.exports = class ExampleClient extends Client {
     constructor(options = {}) {
         super({
@@ -29,8 +28,6 @@ module.exports = class ExampleClient extends Client {
         this.songs = new Array();
 
         this.config = config;
-
-        this.musicUtil = musicUtil;
     }
 
     generateCommands(group, prefix) {

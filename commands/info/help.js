@@ -55,10 +55,6 @@ module.exports = {
                 }, {
                     name: 'Moderation',
                     value: client.generateCommands('moderation', client.config.PREFIX),
-                }, {
-                    name: 'Music',
-                    value: client.generateCommands('music', client.config.PREFIX),
-                    inline: false
                 });
             return message.channel.send(embed);
         }
